@@ -29,16 +29,22 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DOLBY_PATH)/sepolicy/vendor
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DOLBY_PATH)/dolby_framework_matrix.xml
-DEVICE_MANIFEST_FILE += $(DOLBY_PATH)/vendor.dolby.hardware.dms@2.0-service.xml
-    
+
+PRODUCT_PACKAGES += \
+    vendor.dolby.hardware.dms@2.0-service.xml \
+    vendor.dolby.media.c2.xml
+
 # Configs
 PRODUCT_COPY_FILES += \
-    $(DOLBY_PATH)/configs/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
-    $(DOLBY_PATH)/configs/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
+    $(DOLBY_PATH)/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
+    $(DOLBY_PATH)/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
 
 # Dolby VNDK libs
 PRODUCT_PACKAGES += \
     libstagefright_foundation-v33
+
+PRODUCT_PACKAGES += \
+    libshim_dolby
 
 # Init
 PRODUCT_PACKAGES += \
@@ -50,7 +56,7 @@ PRODUCT_PACKAGES += \
 
 # Spatial Audio
 PRODUCT_COPY_FILES += \
-    $(DOLBY_PATH)/configs/android.hardware.sensor.dynamic.head_tracker.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.dynamic.head_tracker.xml \
+    $(DOLBY_PATH)/configs/android.hardware.sensor.dynamic.head_tracker.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.dynamic.head_tracker.xml
 
 # Spatial Audio: optimize spatializer effect
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -61,27 +67,33 @@ PRODUCT_PROPERTY_OVERRIDES += \
        ro.audio.spatializer_enabled=true \
        ro.audio.headtracking_enabled=true \
        ro.audio.spatializer_transaural_enabled_default=false \
-       persist.vendor.audio.spatializer.speaker_enabled=true \
+       persist.vendor.audio.spatializer.speaker_enabled=true
 
 # Spatial Audio Proprietary blobs
 PRODUCT_PACKAGES += \
-    libspatialaudio \
+    libspatialaudio
 
-# Media C2 Vendor
+# Media (C2)
 PRODUCT_PACKAGES += \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_soft_common.vendor \
-    libstagefright_softomx.vendor \
-    libstagefright_softomx_plugin.vendor \
+    android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.c2@1.1.vendor \
+    android.hardware.media.c2@1.2.vendor \
+    libcodec2_hidl@1.2.vendor \
+    libsfplugin_ccodec_utils.vendor \
+    libcodec2_soft_common.vendor
+
+# Codec2 Props
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.audio.c2.preferred=true \
+    debug.c2.use_dmabufheaps=1 \
+    vendor.qc2audio.suspend.enabled=true \
+    vendor.qc2audio.per_frame.flac.dec.enabled=true
 
 # Dolby Props
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1 \
-    vendor.audio.dolby.ds2.enabled=false \
+    ro.vendor.dolby.dax.version=DAX3_3.7.0.8_r1 \
     vendor.audio.dolby.ds2.hardbypass=false \
-    ro.vendor.audio.dolby.dax.support=true \
-    ro.vendor.audio.dolby.surround.enable=true \
-    persist.vendor.audio_fx.current=dolby
+    vendor.audio.dolby.ds2.enabled=false
 
 # Remove Packages for Dolby Support
 PRODUCT_PACKAGES += \
@@ -101,7 +113,7 @@ PRODUCT_PACKAGES += \
     com.motorola.motosignature \
     moto-checkin \
     moto-settings \
-    moto \
+    moto
 
 # Dolby Permissions
 PRODUCT_COPY_FILES += \
@@ -117,31 +129,34 @@ PRODUCT_COPY_FILES += \
     $(DOLBY_PATH)/proprietary/system_ext/etc/sysconfig/config-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/config-com.dolby.daxservice.xml \
     $(DOLBY_PATH)/proprietary/system_ext/etc/sysconfig/config-com.motorola.android.providers.settings.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/config-com.motorola.android.providers.settings.xml \
     $(DOLBY_PATH)/proprietary/system_ext/etc/sysconfig/config-com.motorola.dolby.dolbyui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/config-com.motorola.dolby.dolbyui.xml \
-    $(DOLBY_PATH)/proprietary/system_ext/etc/sysconfig/config-com.motorola.motosignature.app.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/config-com.motorola.motosignature.app.xml \
+    $(DOLBY_PATH)/proprietary/system_ext/etc/sysconfig/config-com.motorola.motosignature.app.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/config-com.motorola.motosignature.app.xml
 
 # Dolby Proprietary blobs
 PRODUCT_COPY_FILES += \
     $(DOLBY_PATH)/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
+    $(DOLBY_PATH)/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc
 
 PRODUCT_PACKAGES += \
+    libdapparamstorage-dolby \
     libdapparamstorage \
-    libdeccfg \
-    vendor.dolby.hardware.dms@2.0 \
-    libdlbdsservice \
-    vendor.dolby.hardware.dms@2.0-impl \
-    vendor.dolby.hardware.dms@2.0-service \
     libdlbpreg \
-
-# Dolby SoundFX
-PRODUCT_PACKAGES += \
+    libstagefright_foundation-dolby \
+    libdlbvol \
     libhwdap \
+    libswdap \
     libswgamedap \
     libswvqe \
-    libdlbvol \
+    vendor.dolby.hardware.dms@2.0-dolby \
+    vendor.dolby.hardware.dms@2.0 \
+    libcodec2_soft_ac4dec \
+    libcodec2_soft_ddpdec \
+    libcodec2_soft_dolby \
+    libcodec2_store_dolby \
+    libdeccfg \
+    libdlbdsservice \
+    liboem_specific \
+    vendor.dolby.hardware.dms@2.0-impl \
+    vendor.dolby.hardware.dms@2.0-service \
+    vendor.dolby.media.c2@1.0-service
 
-# Dolby MediaCodecs
-PRODUCT_PACKAGES += \
-    libstagefright_soft_ac4dec \
-    libstagefright_soft_ddpdec \
-    libstagefrightdolby \
 
