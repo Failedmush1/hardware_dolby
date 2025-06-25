@@ -221,7 +221,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "both",
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -264,7 +264,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "both",
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -511,7 +511,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "both",
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -554,7 +554,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "both",
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -887,32 +887,6 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/c2.dolby.avc.dec.so",
-            ],
-            shared_libs: [
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
-                "libbase",
-                "libcodec2",
-                "libcodec2_vndk",
-                "libutils",
-                "libcodec2_soft_common",
-                "libcutils",
-                "liblog",
-                "libsfplugin_ccodec_utils",
-                "libstagefright_foundation-v33",
-                "c2.dolby.store",
-                "c2.dolby.client",
-                "libstagefright_bufferpool@2.0.1",
-                "libdolbyvision",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/c2.dolby.avc.dec.so",
@@ -941,7 +915,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "both",
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -953,32 +927,6 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/c2.dolby.avc.sec.dec.so",
-            ],
-            shared_libs: [
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
-                "libbase",
-                "libcodec2",
-                "libcodec2_vndk",
-                "libutils",
-                "libcodec2_soft_common",
-                "libcutils",
-                "liblog",
-                "libsfplugin_ccodec_utils",
-                "libstagefright_foundation-v33",
-                "c2.dolby.store",
-                "c2.dolby.client",
-                "libstagefright_bufferpool@2.0.1",
-                "libdolbyvision",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/c2.dolby.avc.sec.dec.so",
@@ -1007,7 +955,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "both",
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -1019,29 +967,6 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/c2.dolby.client.so",
-            ],
-            shared_libs: [
-                "libcodec2_hidl_shim",
-                "libcodec2_hidl_shim",
-                "libbase",
-                "liblog",
-                "libcodec2",
-                "libcodec2_vndk",
-                "libutils",
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
-                "libhidlbase",
-                "libcutils",
-                "libstagefright_bufferpool@2.0.1",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/c2.dolby.client.so",
@@ -1065,8 +990,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "both",
-    check_elf_files: false,
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -1078,24 +1002,6 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/c2.dolby.egl.so",
-            ],
-            shared_libs: [
-                "libui",
-                "libGLESv3",
-                "libEGL",
-                "liblog",
-                "libcutils",
-                "libstagefright_foundation",
-                "libnativewindow",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/c2.dolby.egl.so",
@@ -1107,7 +1013,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libcutils",
                 "libstagefright_foundation",
-                "libnativewindow",
                 "libc++",
                 "libc",
                 "libm",
@@ -1115,7 +1020,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "both",
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -1127,32 +1032,6 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/c2.dolby.hevc.dec.so",
-            ],
-            shared_libs: [
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
-                "libbase",
-                "libcodec2",
-                "libcodec2_vndk",
-                "libutils",
-                "libcodec2_soft_common",
-                "libcutils",
-                "liblog",
-                "libsfplugin_ccodec_utils",
-                "libstagefright_foundation-v33",
-                "c2.dolby.store",
-                "c2.dolby.client",
-                "libstagefright_bufferpool@2.0.1",
-                "libdolbyvision",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/c2.dolby.hevc.dec.so",
@@ -1181,7 +1060,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "both",
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -1193,32 +1072,6 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/c2.dolby.hevc.enc.so",
-            ],
-            shared_libs: [
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
-                "libbase",
-                "libcodec2",
-                "libcodec2_vndk",
-                "libutils",
-                "libcodec2_soft_common",
-                "libcutils",
-                "liblog",
-                "libsfplugin_ccodec_utils",
-                "libstagefright_foundation",
-                "c2.dolby.store",
-                "c2.dolby.client",
-                "libstagefright_bufferpool@2.0.1",
-                "libdolbyvision",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/c2.dolby.hevc.enc.so",
@@ -1246,7 +1099,7 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "both",
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -1258,32 +1111,6 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/c2.dolby.hevc.sec.dec.so",
-            ],
-            shared_libs: [
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
-                "libbase",
-                "libcodec2",
-                "libcodec2_vndk",
-                "libutils",
-                "libcodec2_soft_common",
-                "libcutils",
-                "liblog",
-                "libsfplugin_ccodec_utils",
-                "libstagefright_foundation-v33",
-                "c2.dolby.store",
-                "c2.dolby.client",
-                "libstagefright_bufferpool@2.0.1",
-                "libdolbyvision",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/c2.dolby.hevc.sec.dec.so",
@@ -1324,26 +1151,6 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/c2.dolby.store.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcodec2",
-                "libcodec2_vndk",
-                "libutils",
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
-                "liblog",
-                "libcutils",
-                "libdmabufheap",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/c2.dolby.store.so",
@@ -1377,19 +1184,6 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libdolbyottcameracontrol.so",
-            ],
-            shared_libs: [
-                "libdl",
-                "liblog",
-                "libGLESv3",
-                "libEGL",
-                "libc",
-                "libm",
-            ],
-        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libdolbyottcameracontrol.so",
@@ -1416,33 +1210,6 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libdolbyvision.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcodec2",
-                "libcodec2_vndk",
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
-                "liblog",
-                "libEGL",
-                "libGLESv2",
-                "libui",
-                "libutils",
-                "libstagefright_foundation",
-                "libcutils",
-                "libdolbyottcameracontrol",
-                "libhidlbase",
-                "c2.dolby.egl",
-                "c2.dolby.client",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libdolbyvision.so",
@@ -1489,12 +1256,11 @@ cc_prebuilt_binary {
     name: "dolbycodec2",
     owner: "xiaomi",
     target: {
-        android_arm: {
+        android_arm64: {
             srcs: [
                 "proprietary/vendor/bin/hw/dolbycodec2",
             ],
             shared_libs: [
-                "libstagefright_foundation-v33",
                 "libstagefright_foundation-v33",
                 "libbase",
                 "liblog",
@@ -1503,10 +1269,10 @@ cc_prebuilt_binary {
                 "libutils",
                 "android.hardware.media.c2@1.0",
                 "libcodec2_hidl@1.0",
+                "libavservices_minijail_vendor",
                 "libbinder",
                 "libhidlbase",
                 "c2.dolby.store",
-                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -1514,7 +1280,7 @@ cc_prebuilt_binary {
             ],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "64",
     strip: {
         none: true,
     },
