@@ -150,7 +150,6 @@ PRODUCT_PACKAGES += \
     vendor.dolby.hardware.dms@2.0 \
     libcodec2_soft_ac4dec \
     libcodec2_soft_ddpdec \
-    libcodec2_soft_dolby \
     libcodec2_store_dolby \
     libdeccfg \
     libdlbdsservice \
