@@ -47,7 +47,7 @@ At the end an example commit to properly implement it in your device tree could 
 
 [**2**] https://github.com/Spanish-or-Vanish/android_device_xiaomi_sm8350-common/commit/f5abe4a589d54d8363b0f3458e09e3c069cf6384
 
-[**3**] https://github.com/Spanish-or-Vanish/android_device_xiaomi_sm8350-common/commit/288ee372d8d629da655bc280442e378c16b49cfc
+[**3**] https://github.com/Spanish-or-Vanish/android_device_xiaomi_sm8350-common/commit/6633f66fb105e0c00440d2909d460ec2918cfb38
  
 #### Tip pick anyone for Reference:
           https://dumps.tadiphone.dev/dumps/xiaomi/vili/-/blob/missi_phone_global-user-14-UKQ1.231207.002-V816.0.5.0.UKDMIXM-release-keys/aosp-device-tree/proprietary-files.txt#L2072
