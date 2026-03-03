@@ -17,7 +17,7 @@ soong_namespace {
 
 prebuilt_etc_xml {
     name: "vendor.dolby.hardware.dms@2.0-service.xml",
-    owner: "xiaomi",
+    owner: "motorola",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.dolby.hardware.dms@2.0-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
@@ -26,7 +26,7 @@ prebuilt_etc_xml {
 
 prebuilt_etc_xml {
     name: "vendor.dolby.media.c2.xml",
-    owner: "xiaomi",
+    owner: "motorola",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.dolby.media.c2.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
@@ -34,30 +34,50 @@ prebuilt_etc_xml {
 }
 
 cc_prebuilt_library_shared {
-	name: "libspatialaudio",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/soundfx/libspatialaudio.so"],
-			shared_libs: ["libaudioutils", "libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/soundfx/libspatialaudio.so"],
-			shared_libs: ["libaudioutils", "libcutils", "liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	relative_install_path: "soundfx",
-	prefer: true,
-	soc_specific: true,
+    name: "libspatialaudio",
+    owner: "google",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/soundfx/libspatialaudio.so",
+            ],
+            shared_libs: [
+                "libaudioutils",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libspatialaudio.so",
+            ],
+            shared_libs: [
+                "libaudioutils",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
     name: "libdapparamstorage",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -98,7 +118,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libdlbpreg",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -143,7 +163,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "vendor.dolby.hardware.dms@2.0",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -186,7 +206,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libdlbdsservice",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -219,7 +239,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "liboem_specific",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -244,7 +264,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "vendor.dolby.hardware.dms@2.0-impl",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -274,7 +294,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_binary {
     name: "vendor.dolby.hardware.dms@2.0-service",
-    owner: "xiaomi",
+    owner: "motorola",
     target: {
         android_arm64: {
             srcs: [
@@ -306,7 +326,7 @@ cc_prebuilt_binary {
 
 cc_prebuilt_library_shared {
     name: "libdlbvol",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -356,7 +376,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libswdap",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -410,7 +430,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libswgamedap",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -460,7 +480,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libswvqe",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -510,7 +530,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libdapparamstorage-dolby",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -551,7 +571,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libstagefright_foundation-dolby",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -594,7 +614,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "vendor.dolby.hardware.dms@2.0-dolby",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -637,7 +657,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcodec2_soft_ac4dec",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -673,7 +693,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcodec2_soft_ddpdec",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -709,7 +729,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcodec2_soft_dolby",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -740,7 +760,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcodec2_store_dolby",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -770,7 +790,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libdeccfg",
-    owner: "xiaomi",
+    owner: "motorola",
     strip: {
         none: true,
     },
@@ -800,7 +820,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_binary {
     name: "vendor.dolby.media.c2@1.0-service",
-    owner: "xiaomi",
+    owner: "motorola",
     target: {
         android_arm64: {
             srcs: [
