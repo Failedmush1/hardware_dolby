@@ -3,3 +3,6 @@ allow mediacodec hal_dvs_hwservice:hwservice_manager find;
 allow mediacodec fwk_sensor_hwservice:hwservice_manager find;
 binder_call(mediacodec, hal_dms_default)
 hal_client_domain(mediacodec, hal_dms)
+hal_client_domain(mediacodec, hal_dvs)
+
+get_prop(mediacodec, graphics_config_writable_prop)
