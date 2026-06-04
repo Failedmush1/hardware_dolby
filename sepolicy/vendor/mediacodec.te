@@ -6,3 +6,4 @@ hal_client_domain(mediacodec, hal_dms)
 hal_client_domain(mediacodec, hal_dvs)
 
 get_prop(mediacodec, graphics_config_writable_prop)
+allow mediacodec graphics_config_writable_prop:file read;
