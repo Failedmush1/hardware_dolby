@@ -8,7 +8,7 @@
 android_app {
     name: "DolbyAtmos",
 
-    srcs: ["src/co/aospa/dolby/DolbyActivity.kt", "src/co/aospa/dolby/DolbyController.kt", "src/co/aospa/dolby/preference/DolbySettingsFragment.kt", "src/co/aospa/dolby/preference/DolbyIeqPreference.kt", "src/co/aospa/dolby/preference/DolbyPreferenceStore.kt"],
+    srcs: ["src/co/aospa/dolby/DolbyActivity.kt", "src/co/aospa/dolby/DolbyController.kt", "src/co/aospa/dolby/preference/DolbySettingsFragment.kt", "src/co/aospa/dolby/preference/DolbyIeqPreference.kt", "src/co/aospa/dolby/preference/DolbyPreferenceStore.kt", "src/co/aospa/dolby/BootCompletedReceiver.kt", "src/co/aospa/dolby/DolbyAudioEffect.kt", "src/co/aospa/dolby/DolbyConstants.kt", "src/co/aospa/dolby/DolbyTileService.kt", "src/co/aospa/dolby/SummaryProvider.kt"],
     resource_dirs: ["res"],
     certificate: "platform",
     platform_apis: true,
