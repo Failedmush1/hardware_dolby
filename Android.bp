@@ -36,6 +36,7 @@ prebuilt_etc_xml {
 cc_prebuilt_library_shared {
     name: "libspatialaudio",
     owner: "google",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -78,6 +79,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libdapparamstorage-dolby",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -119,6 +121,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libdapparamstorage",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -160,6 +163,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libdlbpreg",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -205,6 +209,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libstagefright_foundation-dolby",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -248,6 +253,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libdlbvol",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -298,6 +304,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libswdap",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -352,6 +359,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libswgamedap",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -402,6 +410,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libswvqe",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -452,6 +461,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "vendor.dolby.hardware.dms@2.0-dolby",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -495,6 +505,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "vendor.dolby.hardware.dms@2.0",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -538,6 +549,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libcodec2_soft_ac4dec",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -574,6 +586,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libcodec2_soft_ddpdec",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -610,6 +623,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libcodec2_soft_dolby",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -641,6 +655,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libcodec2_store_dolby",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -670,6 +685,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libdeccfg",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -700,6 +716,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libdlbdsservice",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -733,6 +750,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "liboem_specific",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -757,6 +775,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "vendor.dolby.hardware.dms@2.0-impl",
     owner: "sony",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -808,6 +827,7 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -847,6 +867,7 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -858,6 +879,7 @@ cc_prebuilt_binary {
 cc_prebuilt_library_shared {
     name: "c2.dolby.avc.dec",
     owner: "xiaomi",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -898,6 +920,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "c2.dolby.avc.sec.dec",
     owner: "xiaomi",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -938,6 +961,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "c2.dolby.client",
     owner: "xiaomi",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -973,6 +997,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "c2.dolby.egl",
     owner: "xiaomi",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -1003,6 +1028,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "c2.dolby.hevc.dec",
     owner: "xiaomi",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -1043,6 +1069,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "c2.dolby.hevc.sec.dec",
     owner: "xiaomi",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -1083,6 +1110,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "c2.dolby.store",
     owner: "xiaomi",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -1116,6 +1144,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libdolbyottcameracontrol",
     owner: "xiaomi",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -1142,6 +1171,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libdolbyvision",
     owner: "xiaomi",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -1206,6 +1236,7 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     strip: {
         none: true,
     },
