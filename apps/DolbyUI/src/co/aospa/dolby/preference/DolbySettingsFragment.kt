@@ -33,9 +33,9 @@ import co.aospa.dolby.DolbyConstants.Companion.dlog
 import co.aospa.dolby.DolbyController
 import co.aospa.dolby.R
 import com.android.settingslib.widget.MainSwitchPreference
-import com.android.settingslib.widget.SettingsBasePreferenceFragment
+import androidx.preference.PreferenceFragmentCompat
 
-class DolbySettingsFragment : SettingsBasePreferenceFragment(),
+class DolbySettingsFragment : PreferenceFragmentCompat(),
     OnPreferenceChangeListener {
 
     private val switchBar by lazy {

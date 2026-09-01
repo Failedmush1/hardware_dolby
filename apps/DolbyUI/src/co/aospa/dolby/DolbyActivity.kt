@@ -8,7 +8,7 @@ package co.aospa.dolby
 
 import android.os.Bundle
 import co.aospa.dolby.preference.DolbySettingsFragment
-import com.android.settingslib.collapsingtoolbar.FragmentActivity
+import androidx.fragment.app.FragmentActivity
 
 private const val TAG = "DolbyActivity"
 
