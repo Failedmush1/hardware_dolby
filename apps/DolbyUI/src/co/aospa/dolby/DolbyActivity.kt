@@ -8,16 +8,16 @@ package co.aospa.dolby
 
 import android.os.Bundle
 import co.aospa.dolby.preference.DolbySettingsFragment
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
+import com.android.settingslib.collapsingtoolbar.FragmentActivity
 
 private const val TAG = "DolbyActivity"
 
-class DolbyActivity : CollapsingToolbarBaseActivity() {
+class DolbyActivity : FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportFragmentManager.beginTransaction()
-            .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, DolbySettingsFragment(), TAG)
+            .replace(android.R.id.content, DolbySettingsFragment(), TAG)
             .commit()
     }
 }

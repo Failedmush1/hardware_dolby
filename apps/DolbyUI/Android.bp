@@ -8,7 +8,7 @@
 android_app {
     name: "DolbyAtmos",
 
-    srcs: ["src/**/*.kt"],
+    srcs: ["src/co/aospa/dolby/DolbyActivity.kt", "src/co/aospa/dolby/DolbyController.kt", "src/co/aospa/dolby/DolbyPreferenceStore.kt", "src/co/aospa/dolby/preference/DolbySettingsFragment.kt", "src/co/aospa/dolby/preference/DolbyIeqPreference.kt", "src/co/aospa/dolby/preference/DolbySwitchPreference.kt"],
     resource_dirs: ["res"],
     certificate: "platform",
     platform_apis: true,
