@@ -31,7 +31,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DOLBY_PATH)/sepolicy/vendor
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DOLBY_PATH)/dolby_framework_matrix.xml
 
 PRODUCT_PACKAGES += \
-    DolbyAtmos \
+
     vendor.dolby.hardware.dms@2.0-service.xml \
     vendor.dolby.media.c2.xml
 
@@ -48,17 +48,17 @@ PRODUCT_COPY_FILES += \
 
 # Dolby VNDK libs
 PRODUCT_PACKAGES += \
-    DolbyAtmos \
+
     libstagefright_foundation-v33
 
 # Init
 PRODUCT_PACKAGES += \
-    DolbyAtmos \
+
     init.dolby.rc
 
 # Overlays    
 PRODUCT_PACKAGES += \
-    DolbyAtmos \
+
     DolbyFrameworksResCommon
 
 # Spatial Audio
@@ -79,12 +79,12 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Spatial Audio Proprietary blobs
 PRODUCT_PACKAGES += \
-    DolbyAtmos \
+
     libspatialaudio
 
 # Media (C2)
 PRODUCT_PACKAGES += \
-    DolbyAtmos \
+
     android.hardware.media.c2@1.0.vendor \
     android.hardware.media.c2@1.1.vendor \
     android.hardware.media.c2@1.2.vendor \
@@ -107,21 +107,23 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Remove Packages for Dolby Support
 PRODUCT_PACKAGES += \
-    DolbyAtmos \
+
     RemovePackagesDolby
 
 # DSP Volume Synchronizer
 PRODUCT_PACKAGES += \
-    DolbyAtmos \
+
     DSPVolumeSynchronizer
 
+PRODUCT_PACKAGES += \
+    DolbyAtmos
 # Dolby Proprietary blobs
 PRODUCT_COPY_FILES += \
     $(DOLBY_PATH)/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
     $(DOLBY_PATH)/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc
 
 PRODUCT_PACKAGES += \
-    DolbyAtmos \
+
     libdapparamstorage-dolby \
     libdapparamstorage \
     libdlbpreg \
@@ -149,7 +151,7 @@ PRODUCT_COPY_FILES += \
     $(DOLBY_PATH)/proprietary/vendor/etc/init/vendor.dolbyvision.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolbyvision.media.c2@1.0-service.rc
 
 PRODUCT_PACKAGES += \
-    DolbyAtmos \
+
     c2.dolby.avc.dec \
     c2.dolby.avc.sec.dec \
     c2.dolby.client \
@@ -163,5 +165,5 @@ PRODUCT_PACKAGES += \
 
 # Shim
 PRODUCT_PACKAGES += \
-    DolbyAtmos \
+
     libcodec2_hidl_shim.vendor
