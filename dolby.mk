@@ -47,7 +47,7 @@ PRODUCT_COPY_FILES += \
 
 # Dolby VNDK libs
 PRODUCT_PACKAGES += \
-    libstagefright_foundation-v33
+    libstagefright_foundation-atmos
 
 # Init
 PRODUCT_PACKAGES += \

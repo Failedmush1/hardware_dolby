@@ -369,7 +369,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libdlbpreg",
-    owner: "sony",
+    owner: "dolby",
     strip: {
         none: true,
     },
@@ -383,7 +383,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "libaudioutils",
-                "libstagefright_foundation-v33",
+                "libstagefright_foundation-atmos",
                 "libc++",
                 "libc",
                 "libm",
@@ -399,7 +399,50 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "libaudioutils",
-                "libstagefright_foundation-v33",
+                "libstagefright_foundation-atmos",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_foundation-atmos",
+    owner: "dolby",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libstagefright_foundation-atmos.so",
+            ],
+            shared_libs: [
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libstagefright_foundation-atmos.so",
+            ],
+            shared_libs: [
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -457,7 +500,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libdlbvol",
-    owner: "sony",
+    owner: "dolby",
     strip: {
         none: true,
     },
@@ -471,9 +514,9 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "libaudioutils",
-                "libstagefright_foundation-v33",
+                "libstagefright_foundation-atmos",
                 "libdlbpreg",
-                "vendor.dolby.hardware.dms@2.0",
+                "vendor.dolby.hardware.dms@2.0-atmos.so",
                 "libc++",
                 "libc",
                 "libm",
@@ -489,9 +532,9 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "libaudioutils",
-                "libstagefright_foundation-v33",
+                "libstagefright_foundation-atmos",
                 "libdlbpreg",
-                "vendor.dolby.hardware.dms@2.0",
+                "vendor.dolby.hardware.dms@2.0-atmos.so",
                 "libc++",
                 "libc",
                 "libm",
@@ -501,6 +544,49 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "both",
     relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.dolby.hardware.dms@2.0-atmos.so",
+    owner: "dolby",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.dolby.hardware.dms@2.0-atmos.so.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0-atmos.so.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
     prefer: true,
     soc_specific: true,
 }
