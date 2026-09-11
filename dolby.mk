@@ -47,7 +47,8 @@ PRODUCT_COPY_FILES += \
 
 # Dolby VNDK libs
 PRODUCT_PACKAGES += \
-    libstagefright_foundation-v33
+    libstagefright_foundation-v33 \
+    libstagefright_foundation-atmos
 
 # Init
 PRODUCT_PACKAGES += \
@@ -140,6 +141,7 @@ PRODUCT_PACKAGES += \
     libswvqe \
     vendor.dolby.hardware.dms@2.0-dolby \
     vendor.dolby.hardware.dms@2.0 \
+    vendor.dolby.hardware.dms@2.0-atmos.so \
     libcodec2_soft_ac4dec \
     libcodec2_soft_ddpdec \
     libcodec2_soft_dolby \
