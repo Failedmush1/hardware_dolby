@@ -32,8 +32,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DOLBY_PATH)/configs/dolby_framew
 
 PRODUCT_PACKAGES += \
     DolbyAtmos \
-    vendor.dolby.hardware.dms@2.0-service.xml \
-    vendor.dolby.media.c2.xml
+    vendor.dolby.hardware.dms@2.0-service.xml
 
 # Configs
 PRODUCT_COPY_FILES += \
@@ -115,8 +114,7 @@ PRODUCT_PACKAGES += \
 
 # Dolby Proprietary blobs
 PRODUCT_COPY_FILES += \
-    $(DOLBY_PATH)/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
-    $(DOLBY_PATH)/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc
+    $(DOLBY_PATH)/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 
 PRODUCT_PACKAGES += \
     libdapparamstorage-dolby \
@@ -138,8 +136,7 @@ PRODUCT_PACKAGES += \
     libdlbdsservice \
     liboem_specific \
     vendor.dolby.hardware.dms@2.0-impl \
-    vendor.dolby.hardware.dms@2.0-service \
-    vendor.dolby.media.c2@1.0-service
+    vendor.dolby.hardware.dms@2.0-service
 
 # Dolby vision Proprietary blobs
 PRODUCT_COPY_FILES += \
