@@ -68,8 +68,9 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Dolby Spatial Audio: declare use of spatial audio
 PRODUCT_VENDOR_PROPERTIES += \
        ro.audio.spatializer_enabled=true \
-       ro.audio.headtracking_enabled=true \
-       ro.audio.spatializer_transaural_enabled_default=false \
+       ro.audio.headtracking_enabled=false \
+       ro.audio.spatializer_binaural_enabled_default=true \
+       ro.audio.spatializer_transaural_enabled_default=true \
        ro.audio.stereo_spatialization_enabled=true \
        persist.vendor.audio.spatializer.speaker_enabled=true
 
